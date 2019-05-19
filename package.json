@@ -6,15 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf dist",
-    "eleventy:prod": "npx eleventy",
-    "eleventy:dev": "npx eleventy --watch",
+    "eleventy:default": "npx eleventy",
+    "eleventy:watch": "npx eleventy --watch",
     "styles:prod": "node-sass src/styles/ --output dist/styles/ && postcss ./dist/styles/*.css --replace",
     "styles:dev": "node-sass src/styles/ --output dist/styles/ --source-map true --source-map-contents true && postcss ./dist/styles/*.css --replace",
     "scripts:prod": "webpack --mode=production",
     "scripts:dev": "webpack --mode=development",
     "serve": "light-server -c .lightserverrc",
-    "dev": "npm run clean && npm run eleventy:dev & npm run styles:dev && npm run scripts:dev && npm run serve",
-    "build": "npm run clean && npm run styles:prod && npm run scripts:prod && npm run eleventy:prod"
+    "dev": "npm-run-all clean styles:dev scripts:dev eleventy:default --parallel eleventy:watch serve --print-label",
+    "build": "run-s clean styles:prod scripts:prod eleventy:default"
   },
   "repository": {
     "type": "git",
@@ -35,6 +35,7 @@
     "cssnano": "^4.1.10",
     "cssnano-preset-advanced": "^4.0.7",
     "light-server": "^2.6.2",
+    "npm-run-all": "^4.1.5",
     "postcss-cli": "^6.1.2",
     "webpack": "^4.31.0",
     "webpack-cli": "^3.3.2"
