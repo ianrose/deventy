@@ -1,0 +1,8 @@
+@import '_reset.scss';
+
+$var: white;
+body {
+  background-color: $var;
+  display: flex;
+  z-index: 99999;
+}

@@ -1,0 +1,14 @@
+{
+ "port": 8000,
+ "serve": "dist",
+ "bind": "localhost",
+ "quiet": true,
+ "watchexps": [
+    "src/scripts/**/*.js # npm run scripts:dev",
+    "src/styles/**/*.scss # npm run styles:dev",
+    "dist/**/*.html",
+    "src/images/"
+ ],
+ "http2": false,
+ "open": true
+}

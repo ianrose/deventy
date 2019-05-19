@@ -1,0 +1,46 @@
+{
+  "name": "11ty-starter",
+  "version": "1.0.0",
+  "description": "A simple 11ty starter with modern tools",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist",
+    "eleventy:prod": "npx eleventy",
+    "eleventy:dev": "npx eleventy --watch",
+    "styles:prod": "node-sass src/styles/ --output dist/styles/ && postcss ./dist/styles/*.css --replace",
+    "styles:dev": "node-sass src/styles/ --output dist/styles/ --source-map true --source-map-contents true && postcss ./dist/styles/*.css --replace",
+    "scripts:prod": "webpack --mode=production",
+    "scripts:dev": "webpack --mode=development",
+    "serve": "light-server -c .lightserverrc",
+    "dev": "npm run clean && npm run eleventy:dev & npm run styles:dev && npm run scripts:dev && npm run serve",
+    "build": "npm run clean && npm run styles:prod && npm run scripts:prod && npm run eleventy:prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ianrose@github.com/ianrose/11ty-starter.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ianrose/11ty-starter/issues"
+  },
+  "homepage": "https://github.com/ianrose/11ty-starter#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.8.3",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "autoprefixer": "^9.5.1",
+    "babel-loader": "^8.0.6",
+    "cssnano": "^4.1.10",
+    "cssnano-preset-advanced": "^4.0.7",
+    "light-server": "^2.6.2",
+    "postcss-cli": "^6.1.2",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2"
+  },
+  "dependencies": {
+    "acorn": "^6.1.1",
+    "node-sass": "^4.12.0"
+  }
+}
