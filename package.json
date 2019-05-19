@@ -14,7 +14,7 @@
     "scripts:dev": "webpack --mode=development",
     "serve": "light-server -c .lightserverrc",
     "dev": "npm-run-all clean styles:dev scripts:dev eleventy:default --parallel eleventy:watch serve --print-label",
-    "build": "run-s clean styles:prod scripts:prod eleventy:default"
+    "build": "run-s clean styles:prod scripts:prod eleventy:default --print-label"
   },
   "repository": {
     "type": "git",
