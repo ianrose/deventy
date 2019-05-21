@@ -1,6 +1,6 @@
 # Deventy
 
-A minimal 11ty starting point for building static websites with modern tools. Defers to the use of the standard CLI of each tool. Allowing a much easier upgrade path for each individual development tool.
+A minimal 11ty starting point for building static websites with modern tools. Uses the CLI of each tool. Allowing a much easier upgrade path for each individual development tool.
 
 Features:
 - [11ty](https://www.11ty.io/)
