@@ -8,12 +8,14 @@
     "clean": "rm -rf dist",
     "eleventy:default": "npx eleventy",
     "eleventy:watch": "npx eleventy --watch",
+    "eleventy:debug": "",
     "styles:prod": "node-sass src/styles/ --output dist/styles/ && postcss ./dist/styles/*.css --replace",
     "styles:dev": "node-sass src/styles/ --output dist/styles/ --source-map true --source-map-contents true && postcss ./dist/styles/*.css --replace",
     "scripts:prod": "webpack --mode=production",
     "scripts:dev": "webpack --mode=development",
     "serve": "light-server -c .lightserverrc",
     "dev": "npm-run-all clean styles:dev scripts:dev eleventy:default --parallel eleventy:watch serve --print-label",
+    "dev:debug": "DEBUG=* npm run dev",
     "build": "run-s clean styles:prod scripts:prod eleventy:default --print-label"
   },
   "repository": {
