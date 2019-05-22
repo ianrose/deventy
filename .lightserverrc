@@ -11,5 +11,5 @@
     "src/images/"
  ],
  "http2": false,
- "open": true
+ "open": false
 }
