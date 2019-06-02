@@ -1,4 +1,4 @@
-module.exports = ctx = ({
+module.exports = ({
   plugins: {
     autoprefixer: true,
     cssnano: {
