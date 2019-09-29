@@ -1,6 +1,6 @@
 {
   "name": "deventy",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A minimal 11ty starter with modern tools",
   "main": "index.js",
   "scripts": {
