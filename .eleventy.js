@@ -1,4 +1,6 @@
 module.exports = function(eleventyConfig) {
+
+  // Copy images into the static site
   eleventyConfig.addPassthroughCopy('src/images')
 
   return {

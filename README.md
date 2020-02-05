@@ -1,46 +1,39 @@
-# Deventy
+# Hello World
 
-A minimal 11ty starting point for building static websites with modern tools. Uses the CLI of each tool. Allowing a much easier upgrade path for each individual development tool.
+This is an example application we use in research sessions to test documentation for GOV.UK Frontend.
 
-Features:
-- [11ty](https://www.11ty.io/)
-- [Sass/SCSS](https://github.com/sass/node-sass)
-- [Webpack](https://webpack.js.org/)
-- [Babel](https://babeljs.io/)
-- [light-server](https://github.com/txchen/light-server)
-- [PostCSS](https://postcss.org/)
-- [CSSnano](https://cssnano.co/)
-- [Autoprefixer](https://github.com/postcss/autoprefixer)
+It's built using [Eleventy](https://www.11ty.dev/) and based on the [deventy starter project](https://github.com/ianrose/deventy).
 
 ## Getting Started
 
-Install all dependencies using npm:
+In the terminal, install all dependencies using npm:
 
 ```
-$ nvm use
 $ npm install
 ```
 
-### To Develop
+### Developing with a local server
+
+When developing locally, use the built in server which will automatically re-build the site whenever you make changes.
+
+In the terminal, run:
 
 ```
 $ npm run dev
 ```
- And in debug mode:
- 
-```
-$ npm run dev:debug
-```
 
-You can view the website at the given access URL:
-```
-$ light-server is listening at http://localhost:4000
-```
+You can then view the website at http://localhost:4000.
 
-The local url is configured in `.lightserverrc`
+### Example application
 
-### To Build
+The site includes:
 
-```
-npm run build
-```
+- a JavaScript file, which is built from `src/scripts/index.js`
+- a CSS file, which is built from the Sass file `src/styles/index.scss`
+
+## Configuration
+
+You can configure:
+
+- the site build in `.eleventy.js`
+- the JavaScript build pipeline in `webpack.config.js`
