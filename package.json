@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/ianrose/deventy#readme",
   "devDependencies": {
-    "light-server": "2.6.4"
+    "light-server": "2.8.0"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.9.0",
