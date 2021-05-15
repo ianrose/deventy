@@ -31,7 +31,7 @@
     "light-server": "2.9.1"
   },
   "dependencies": {
-    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy": "^0.12.0",
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
     "acorn": "^8.0.0",
